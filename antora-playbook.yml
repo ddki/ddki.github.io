@@ -1,0 +1,42 @@
+runtime:
+  cache_dir: ./.cache/antora
+  log:
+    failure_level: warn
+site:
+  title: Ddki's Blog.
+  url: https://ddki.github.io/
+  start_page: notes::index.adoc
+  # 控制爬虫
+  robots: disallow
+content:
+  sources:
+  - url: https://github.com/ddki/ddki-notes.git
+    # start_path: notes
+    #branches: main, v3.+({0..9}).x
+    branches: master
+    tags: [v*]
+    edit_url: '{web_url}/{refname}/main/{path}'
+asciidoc:
+  attributes:
+    experimental: ''
+    hide-uri-scheme: '@'
+    idprefix: ''
+    idseparator: '-'
+    page-pagination: ''
+    table-frame: 'none@'
+    table-grid: 'rows@'
+urls:
+  latest_version_segment: latest
+  latest_version_segment_strategy: redirect:to
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  # supplemental_files: ./supplemental-ui
+output:
+  dir: ./public
+# network:
+  # https_proxy: http://127.0.0.1:10809
+antora:
+  extensions:
+  - '@antora/lunr-extension'

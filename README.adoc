@@ -1,0 +1,9 @@
+= Github 个人页
+
+使用antora部署的asciidoc静态网站。
+
+== start
+....
+pnpm install 
+pnpm run build:search
+....
