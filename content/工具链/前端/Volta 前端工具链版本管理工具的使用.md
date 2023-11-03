@@ -1,10 +1,17 @@
+---
+title: Volta 前端工具链版本管理工具的使用
+tags:
+  - 前端
+  - 开发工具
+  - volta
+---
 Volta 是一款使用 `rust` 语言开发的前端工具链管理工具。以下是它的官网和源码仓库地址：
 
-`ris:Home` 官网： [Volta](https://volta.sh/)
+🏠 官网： [Volta](https://volta.sh/)
 
-`ris:Github` Github: [Volta](https://github.com/volta-cli/volta)
+🔗 Github: [Volta](https://github.com/volta-cli/volta)
 
-## 安装
+## ⬇️ 安装
 
 Windows 安装建议开启开发者模式。
 
@@ -12,7 +19,7 @@ Windows 安装建议开启开发者模式。
 
 新建环境变量 `VOLTA_HOME` ，用于存储 Volta 数据文件的文件夹（如：D:/volta-data），并在 `PATH` 环境变量中添加 `%VOLTA_HOME%\bin` .
 
-## 配置
+## 🏗️ 配置
 
 ### nodejs 国内镜像
 
@@ -40,9 +47,9 @@ Volta 提供了 [hooks](https://docs.volta.sh/advanced/hooks/) 功能，通过�
 
 添加环境变量 ``VOLTA_FEATURE_PNPM``, 值为 `1` 
 
-## 命令
+## 💻 命令
 
-`ris:BookRead` [官方文档](https://docs.volta.sh/reference/)
+📃 [官方文档](https://docs.volta.sh/reference/)
 
 介绍几个常用的命令：
 - volta fetch 提前把工具链下载到本地缓存，供以后脱机使用。
