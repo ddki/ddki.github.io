@@ -43,6 +43,44 @@ Volta 提供了 [hooks](https://docs.volta.sh/advanced/hooks/) 功能，通过�
 }
 ```
 
+一个完整的 `hooks.json` 配置: 
+```json
+{
+	"node": {
+        "index": {
+            "template": "https://cdn.npmmirror.com/binaries/node/index.json"
+        },
+        "distro": {
+            "template": "https://registry.npmmirror.com/-/binary/node/v{{version}}/{{filename}}"
+        }
+    },
+	"npm": {
+		"index": {
+			"prefix": "https://registry.npmmirror.com/"
+		},
+		"distro": {
+			"prefix": "https://registry.npmmirror.com/npm/-/"
+		}
+	},
+    "yarn": {
+		"index": {
+			"prefix": "https://registry.npmmirror.com/"
+		},
+		"distro": {
+			"prefix": "https://registry.npmmirror.com/yarn/-/"
+		}
+	},
+	"pnpm": {
+		"index": {
+			"prefix": "https://registry.npmmirror.com/"
+		},
+		"distro": {
+			"prefix": "https://registry.npmmirror.com/pnpm/-/"
+		}
+	}
+}
+```
+
 ### [支持pnpm](https://docs.volta.sh/advanced/pnpm)
 
 添加环境变量 ``VOLTA_FEATURE_PNPM``, 值为 `1` 
